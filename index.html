@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="title"
+      content="Тестовое задание на должность Web-мастер/Младший Web-разработчик"
+    />
+    <meta
+      name="Description"
+      content="На этой странице отображен результат тестового задания"
+    />
+
+    <meta name="h1" content="Вакансия веб-программист" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>
+      Тестовое задание на должность Web-мастер/Младший Web-разработчик
+    </title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery.maskedinput.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
+  </head>
+
+  <body>
+    <div class="wrap">
+      <div class="intro">
+        <h1>Вакансия веб-программист</h1>
+        <p class="page_info">
+          <i>На этой странице отображен результат тестового задания</i>
+        </p>
+        <br />
+        <a class="link_style" onClick="openPopup('#wrap_popup1')"
+          >Форма обратной связи</a
+        >
+      </div>
+
+      <div id="wrap_popup1" class="wrap_popup">
+        <div class="popup">
+          <div class="title"></div>
+          <div class="box">
+            <button class="btn_exit" onClick="closePopup('#wrap_popup1')">
+              &#10006;
+            </button>
+            <div class="box_container">
+              <p class="popup_header">Обратный звонок</p>
+
+              <form
+                action="https://jsonplaceholder.typicode.com/posts"
+                autocomplete="on"
+                method="POST"
+              >
+                <div class="name_label">
+                  <div class="data_container">
+                    <label>Имя</label>
+                    <input
+                      type="input"
+                      name="username"
+                      class="name_input"
+                      id="username"
+                    />
+                  </div>
+                </div>
+
+                <div class="phone_label">
+                  <div class="data_container">
+                    <label>Телефон</label>
+                    <input
+                      type="input"
+                      required
+                      name="phone_input"
+                      class="phone_input"
+                      id="phone_number"
+                      placeholder="+7"
+                    />
+                  </div>
+                  <div class="send_error">Сообщение не отправлено</div>
+                  <div class="send_success">Сообщение успешно отправлено</div>
+                </div>
+
+                <div class="checkbox_container">
+                  <label class="lab_container">
+                    <input
+                      class="data_checkbox"
+                      type="checkbox"
+                      name="agreement"
+                      placeholder="Согласен на обработку данных"
+                      checked="checked"
+                      id="agree_checkbox"
+                      required
+                    />
+                    <div class="fake_checkbox"></div>
+                    <div for="agree_checkbox" class="checkbox__info">
+                      Согласиться на обработку персональных данных
+                    </div>
+                  </label>
+                </div>
+
+                <button class="btn_send" type="submit">Отправить</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>

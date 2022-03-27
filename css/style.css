@@ -1,0 +1,219 @@
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/Montserrat-Regular.ttf) format("ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", Georgia, "Times New Roman", Times, serif;
+}
+
+body {
+  background: linear-gradient(to right, #222, #39393a);
+  font-family: Segoe UI;
+  color: #e6e6e6;
+}
+
+.page_info {
+  margin-top: 10px;
+}
+
+.wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+}
+
+.intro a {
+  display: flex;
+  justify-content: center;
+  color: #0fa3de;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.wrap_popup {
+  padding-top: 100px;
+  margin-left: 0px;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.popup {
+  height: auto;
+  width: 320px;
+  margin: auto;
+  display: block;
+  overflow: hidden;
+  box-shadow: 0 0 5px;
+}
+
+.link_style:hover {
+  color: #8a8a8a;
+}
+
+.box {
+  position: relative;
+  width: 310px;
+  height: 350px;
+  display: block;
+  background: #fff;
+  padding: 5px;
+  color: #333;
+  border: none;
+}
+
+.btn_exit {
+  position: absolute;
+  top: 7px;
+  right: 15px;
+  font-size: 20px;
+  border-style: none;
+  background-color: #fff;
+  transition: all ease-out 0.1s;
+}
+
+.btn_exit:hover {
+  color: #8a8a8a;
+}
+
+.btn_send {
+  margin-top: 25px;
+  margin-left: 15px;
+  width: 280px;
+  height: 45px;
+  color: #fff;
+  font-size: 15px;
+  background-color: #333;
+  transition: all ease-out 0.4s;
+}
+
+.btn_send:hover {
+  color: black;
+  background-color: white;
+}
+
+.data_container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 17px;
+}
+
+.name_label {
+  margin-top: 25px;
+  color: #333;
+  width: 300px;
+}
+
+.name_input {
+  margin-top: 5px;
+  padding-left: 10px;
+  width: 263px;
+  height: 35px;
+}
+
+.phone_label {
+  margin-top: 15px;
+  width: 273px;
+}
+
+.phone_input {
+  margin-top: 6px;
+  padding-left: 10px;
+  width: 263px;
+  height: 35px;
+}
+
+.checkbox_container {
+  display: flex;
+  flex-direction: row;
+  margin-top: 27px;
+  margin-left: 15px;
+  width: 300px;
+}
+
+.checkbox__info {
+  margin-left: 10px;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.box_container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.popup_header {
+  font-size: 19px;
+  margin-top: 15px;
+  margin-left: 62px;
+  letter-spacing: 0.5px;
+}
+
+.data_checkbox {
+  display: none;
+}
+
+.fake_checkbox {
+  position: relative;
+  display: inline-block;
+  content: "";
+  width: 23px;
+  height: 16px;
+  font-size: 12px;
+  border: 1px solid #333;
+  transform: translateY(8px);
+}
+
+.fake_checkbox::before {
+  position: absolute;
+  top: -5%;
+  left: 20%;
+  display: block;
+  width: 10px;
+  height: 10px;
+  content: "✓";
+  opacity: 0;
+  transform: 0.2s;
+}
+
+.data_checkbox:checked + .fake_checkbox::before {
+  opacity: 1;
+}
+
+.lab_container {
+  display: flex;
+}
+
+.send_error {
+  display: none;
+  position: absolute;
+  top: 215px;
+  left: 20px;
+  width: 250px;
+  font-family: "Montserrat", Georgia, "Times New Roman", Times, serif;
+  font-size: 12px;
+}
+
+.send_success {
+  display: none;
+  position: absolute;
+  top: 215px;
+  left: 20px;
+  width: 250px;
+  font-size: 12px;
+}
